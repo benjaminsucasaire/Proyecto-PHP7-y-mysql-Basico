@@ -1,0 +1,288 @@
+/*fuentes*/
+/*importar fuentes*/
+@font-face {
+  font-family: "fajala";
+  src: url(../fonts/fuente.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*generales*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.clearfix {
+  clear: both;
+  float: none;
+}
+
+body {
+  /* font-family: 'fajala'; */
+  background-image: url(../img/fondo-elegante.jpg);
+}
+
+.alerta{
+  width: 91%;
+  padding:5px;
+  font-size: 14px;
+  color:white;
+  background-color: green;
+  box-shadow: 0px 1px 3px #ccc;
+  margin-bottom: 10px;
+  border-radius:5px;
+}
+
+.alerta-error{
+
+  background-color:red;
+
+}
+
+.fecha{
+  color:#4e4e4e;
+  margin-top: 5px;
+  font-size:14px;
+}
+
+
+
+/* cabecera */
+
+#cabecera {
+  width: 85%;
+  height: auto;
+  background: transparent;
+  margin: 0px auto;
+}
+/* logotipo */
+#logo {
+  width: auto;
+  min-height: 80px;
+
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+#logo a {
+  font-family: "fajala" Helvetica;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #2979cd;
+  text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
+  transition: all 500ms;
+}
+#logo a:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 0px black, -1px -1px 0px black, -2px -2px 0px black;
+}
+
+/* menu */
+
+#menu {
+  width: 100%;
+  /*gratiente*/
+  background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%);
+  border: 1px solid #c9c9c9;
+  border-radius: 8px;
+  box-shadow: 0px 1px 1px #ccc;
+  /*todo lo que se salga del menu no se vea*/
+  overflow: hidden;
+}
+
+#menu ul {
+  list-style: none;
+}
+#menu ul li a {
+  color: rgb(83, 75, 75);
+  font-size: 15px;
+}
+#menu ul li {
+  padding: 10px 20px 10px 8px;
+  border-right: 1px solid #d6d6d6;
+}
+#menu ul li:hover {
+  background: linear-gradient(to bottom, #f2f2f2 0px, #dad9d4 100%);
+}
+
+/* media queries para el menu */
+@media screen and (max-width: 826px) {
+  #menu ul li {
+    text-align: center;
+    border-bottom: 3px solid #c9cccf;
+  }
+}
+
+@media screen and (min-width: 826px) {
+  #menu ul {
+    /* background: green; */
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+/* contenido  */
+
+#contenedor {
+  width: 85%;
+  height: auto;
+  /* background: red; */
+  margin: 0px auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/*BARRA LATERAL*/
+.bloque {
+  /*lo utilizamos como bloque para poder editarlo*/
+  display: block;
+  width: 90%;
+  margin: 0px auto 35px auto;
+  background-image: url(../img/cubes.png);
+  padding: 15px;
+  /*creamos una sombra al rededor de la cajas*/
+  /*inset: para que la sombra este dentro del propio div*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3),
+    0px 0px 1px #fff inset, 0px -3px 2px rgba(0, 0, 0, 0.25) inset;
+}
+
+label,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  /*utilizamos diplay:block para que se comporten como cajas*/
+  /*MUY IMPORTANTE PARA ACOMODAR LAS CAJAS INPUT Y QUE ESTEN CENTRADOS Y RECTOS */
+  display: block;
+  /*LE DAMOS UN TAMAÑA PARA QUE OCUPE EL 90% DEL ANCHO QUE TENGA, ASI ES POSIBLE QUE SEA RESPOSIVE, ADAPTABLE*/
+  width: 90%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="button"],
+input[type="submit"],.boton {
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  display: block;
+  border-radius: 2px;
+  color: white;
+  background-color: #007ee5;
+  border: 1px solid #156785;
+  cursor: pointer;
+  padding: 07px;
+}
+.boton {
+  color: white !important;;
+  text-align: center;
+  width: 50%;
+}
+.boton-verde {
+  background-color:#21b921;
+  border-color: green;
+  }
+.boton-naranja {
+background-color:orange;
+border-color:#bd7d08 ;
+}
+
+.boton-rojo {
+  background-color:red;
+  border-color:#444;
+  }
+
+.bloque h3 {
+  margin-bottom: 15px;
+}
+
+/*PRINCIPAL*/
+#principal {
+  /* height: 570px; */
+  min-height: 504px;
+  background-image: url(../img/cubes.png);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #ccc;
+
+  padding: 20px;
+  /*si algo se sale que no se vea*/
+  overflow: hidden;
+}
+
+#principal a {
+  color: #333;
+}
+#principal h1 {
+  font-size: 32px;
+  color: #444;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #ccc;
+  font-family: "fajala";
+}
+#principal h2 {
+  font-size: 20px;
+  color: #2979cd;
+  letter-spacing: 1px;
+  font-family: "fajala";
+  text-shadow: 1px 1px 2px #ccc;
+  margin-top: 25px;
+}
+#principal p {
+  margin-top: 8px;
+}
+
+#ver-todas a {
+  display: block;
+  border-radius: 2px;
+  padding: 15px;
+  color: white;
+  background-color: #007ee5;
+  border: 1px solid #156785;
+  cursor: pointer;
+  width: 20%;
+  margin: 0px auto;
+  margin-top: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 826px) {
+  #contenedor {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  /* barra lateral  */
+
+  #sidebar {
+    width: 27%;
+    /* background-color: #2979cd; */
+  }
+  #principal {
+    width: 65%;
+  }
+}
+
+/*foooter pie de pagina*/
+#pie{
+  width: 85%;
+  
+  margin: 0 auto;
+  /*gratiente*/
+  background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%);
+  border: 1px solid #c9c9c9;
+  border-bottom: none;
+  border-radius: 8px 8px 0px 0px ;
+  color: #666;
+  height:auto;
+  padding: 15px;
+  text-align: center;
+}
